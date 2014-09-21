@@ -1,0 +1,5 @@
+puts "The name of students in my lab"
+puts "------------------------------"
+puts "Pablo"
+puts "Yorik"
+puts "Ciaky"
