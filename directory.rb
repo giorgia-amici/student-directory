@@ -1,10 +1,24 @@
-student_count = 3
-puts "The name of students in my lab"
-puts "------------------------------"
-students = ["Pablo", "Yorik", "Ciaky"]
+students = [
+	{:name => "Pablo", :cohort =>  :september},
+	{:name => "Yorik", :cohort => :october},
+	{:name => "Ciaky", :cohort => :january}
+	]
 
-puts "Overall we have #{student_count} students now "
-puts "and their names are "
-students.each do |student|
-puts student
-end 
+def print_header
+	puts "Students now "
+	puts "-------------------"
+end
+
+def print(students)
+	students.each do |student|
+		puts "#{student[:name]} (#{student[:cohort]} cohort)"
+	end
+end
+
+def print_footer(names)
+	puts "Overall we have #{names.length} students"
+end
+
+print_header
+print(students)
+print_footer(students)
